@@ -127,8 +127,18 @@ public class TradingMenu {
                 return false;
             }
 
+            if (!username.matches("[a-zA-Z0-9_]+")) {
+                System.out.println("Invalid username! Only letters, numbers, and underscores allowed.");
+                return false;
+            }
+
             System.out.print("Enter initial deposit amount: $");
             double initialBalance = Double.parseDouble(scanner.nextLine().trim());
+
+            if (initialBalance < 0) {
+                System.out.println("Initial balance cannot be negative.");
+                return false;
+            }
 
             User newUser = platform.registerUser(username, initialBalance);
             if (newUser != null) {

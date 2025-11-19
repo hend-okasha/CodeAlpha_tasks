@@ -36,13 +36,16 @@ public class StockHolding  {
         return purchaseDate;
     }
 
+    public double getTotalInvestment() {
+        return quantity * purchasePrice;
+    }
+
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-
-    public double getTotalInvestment() {
-        return quantity * purchasePrice;
+    public void setPurchasePrice(double purchasePrice) {
+        this.purchasePrice = purchasePrice;
     }
 
     @Override

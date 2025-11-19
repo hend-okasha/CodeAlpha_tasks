@@ -66,6 +66,14 @@ public class HotelMenu {
             System.out.print("Enter category (Standard/Deluxe/Suite): ");
             String category = scanner.nextLine().trim();
 
+            if (!category.equalsIgnoreCase("STANDARD") &&
+                    !category.equalsIgnoreCase("DELUXE") &&
+                    !category.equalsIgnoreCase("SUITE")) {
+                System.out.println("Invalid category! Please choose: Standard, Deluxe, or Suite.");
+                waitForEnter();
+                return;
+            }
+
             System.out.print("Enter check-in date (YYYY-MM-DD): ");
             LocalDate checkInDate = LocalDate.parse(scanner.nextLine().trim());
 
@@ -110,6 +118,14 @@ public class HotelMenu {
             System.out.print("Enter room category (Standard/Deluxe/Suite): ");
             String category = scanner.nextLine().trim();
 
+            if (!category.equalsIgnoreCase("STANDARD") &&
+                    !category.equalsIgnoreCase("DELUXE") &&
+                    !category.equalsIgnoreCase("SUITE")) {
+                System.out.println("Invalid category! Please choose: Standard, Deluxe, or Suite.");
+                waitForEnter();
+                return;
+            }
+
             List<Room> availableRooms = hotel.searchAvailableRooms(category, checkInDate, checkOutDate);
 
             if (availableRooms.isEmpty()) {
@@ -125,6 +141,12 @@ public class HotelMenu {
 
             if (customerName.isEmpty()) {
                 System.out.println("Name cannot be empty.");
+                waitForEnter();
+                return;
+            }
+
+            if (!customerName.matches("[a-zA-Z ]+")) {
+                System.out.println("Invalid name! Only letters and spaces are allowed.");
                 waitForEnter();
                 return;
             }
