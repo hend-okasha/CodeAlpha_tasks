@@ -48,13 +48,15 @@ A room booking manager that handles reservations, cancellations, and room availa
 # Repository Structure
 
 CodeAlpha_tasks/
+│
 ├── CodeAlpha_HotelReservationSystem/
-│ └── README.md
+│   └── README.md
+│
 ├── CodeAlpha_StockTradingPlatform/
-│ └── README.md
+│   └── README.md
+│
 └── CodeAlpha_StudentGradeTracker/
-└── README.md
-
+    └── README.md
 
 Each project contains its own detailed description, source code, and instructions.
 
