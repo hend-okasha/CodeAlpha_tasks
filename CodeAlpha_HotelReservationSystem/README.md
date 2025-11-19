@@ -27,29 +27,21 @@ It supports multiple room categories, booking, cancellation, and viewing reserva
 
 ---
 ## System Architecture / Classes
-
 - **Main.java**  
   Entry point, system initialization  
-
 - **Hotel.java**  
   Core logic: rooms, bookings, availability, file I/O  
-
 - **HotelMenu.java**  
   User interface, menu navigation, input/output handling  
-
 - **Room.java**  
   Room entity and properties  
-
 - **RoomCategory.java**  
-  Room types enum (Standard, Deluxe, Suite)  
-
+  Room types enum (Standard, Deluxe, Suite)
 - **Booking.java**  
   Booking records: customer & reservation info  
-
 - **PaymentService.java**  
   Payment simulation & transaction processing
-
-
+  
 ---
 
 ## Technologies
@@ -65,5 +57,6 @@ It supports multiple room categories, booking, cancellation, and viewing reserva
 1. Open the project folder  
 2. Run `Main.java`  
 3. Choose room type, book, cancel, or view reservations  
+
 
 
